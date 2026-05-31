@@ -1,0 +1,51 @@
+@ProductAPI_HostAddress = http://localhost:5165
+
+GET {{ProductAPI_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{ProductAPI_HostAddress}}/todos/1
+Accept: application/json
+
+###
+### GET all products
+GET {{ProductAPI_HostAddress}}/api/products
+Accept: application/json
+
+###
+
+### GET product by id
+GET {{ProductAPI_HostAddress}}/api/products/1
+Accept: application/json
+
+###
+
+### CREATE product
+POST {{ProductAPI_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  
+  "name": "Keyboard",
+  "price": 100,
+  "quantity":8
+}
+
+###
+
+### UPDATE product
+PUT {{ProductAPI_HostAddress}}/api/products/6
+Content-Type: application/json
+
+{
+  "id":6,
+  "name": "Laptop Pro",
+  "price": 1500,
+  "quantity":6
+}
+
+###
+
+### DELETE product
+DELETE {{ProductAPI_HostAddress}}/api/products/1
